@@ -1,0 +1,50 @@
+/*
+ * Lucy
+ * Jan 3, 2018
+ * Description: This class outlines the parent methods related for arithmetic practice.
+ */
+import java.util.InputMismatchException; 
+import java.util.Scanner;
+
+abstract public class Arithmetic{
+    
+    // setting up variables
+    private int leftOperand;
+    private int rightOperand;
+    
+    public Arithmetic() {
+        setLeftOperand( (int)(Math.random() * 9 + 1)  );
+        setRightOperand( (int)(Math.random() * 9 + 1) );
+    }
+   
+    // common methods 
+    public void setLeftOperand( int operand) {
+        leftOperand = operand;
+        if (leftOperand < 0) {
+            System.err.println("Setting the operand to 1");
+            leftOperand = 1;
+        }
+        
+    }
+    
+    public void setRightOperand( int operand) {
+        rightOperand = operand;
+        if (rightOperand < 0) {
+            System.err.println("Setting the operand to 1");
+            rightOperand = 1;
+        }
+    }
+    
+    public int getLeftOperand() {
+        return leftOperand;
+    }
+    
+    public int getRightOperand() {
+        return rightOperand;
+    }
+    
+    //polymorphmism
+    public abstract String getQuestion();
+    public abstract boolean checkAnswer(int answer);
+}
+        

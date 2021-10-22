@@ -1,0 +1,56 @@
+/*
+ * Lucy
+ * Nov. 28 2018
+ * Description: This class outlines the methods related for addition practice.
+ */
+
+import java.util.Scanner; 
+
+public class AdditionTest {
+    
+    int numQuestions;
+    boolean questionStatus = false;
+    int counter = 1;
+    int answer;
+    int attempts = 0;
+    
+    Addition a = new addition();
+    
+    while (questionStatus == false) {
+        System.out.print("How many questions would you like (1-10) ?");
+        numQuestions = input.nextInt();
+        
+        if (numQuestions < 0)  {
+            System.out.print("You must enter an integer between 1 and 10.");
+            
+        }
+        else {
+            questionStatus = true;
+        }
+    }
+    
+    while (counter <= numQuestions) {
+        System.out.print( "Q" + counter + ": " + a.getQuestion() );
+        answer = input.nextInt();
+        if ( a.checkAnswer() ) {
+            System.out.print("");
+        }
+        else {
+            System.out.print("");
+        }
+        attempts += 1;
+    }
+    
+    public String Critiscism() {
+        int randomNum = Math.random(1,5);
+        
+    }
+    
+    public String Compliment() {
+        int randomNum = Math.random(1,5);
+        
+    }
+    
+    System.out.print("You answered " + numQuestions + " using " + attempts + " responses, your score is " + (attempts/numQuestions * 1.0) + "%."
+    
+    

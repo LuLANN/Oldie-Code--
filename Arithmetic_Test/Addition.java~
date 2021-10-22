@@ -1,0 +1,33 @@
+/*
+ * Lucy
+ * Nov. 28 2018
+ * Description: This class outlines the methods related for addition practice.
+ */
+import java.util.InputMismatchException; 
+import java.util.Scanner;
+
+public class Addition extends Arithmetic{
+ 
+    // no argument constructor
+    public Addition() {
+        super();
+    }
+    
+    public int getAnswer() {
+        int answer = getLeftOperand() + getRightOperand();
+        return answer;
+    }
+    
+    @Override
+    public String getQuestion() {
+        return getLeftOperand() + " + " + getRightOperand() + " = ";
+    } 
+    
+    @Override
+    public boolean checkAnswer(int answer) {
+        //reusing the getAnswer method 
+        
+        return getAnswer() == answer;
+       
+    }
+}
